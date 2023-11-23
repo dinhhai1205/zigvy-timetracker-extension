@@ -1,4 +1,7 @@
-/* normalize css starts here */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::before,
 *::after {
@@ -16,7 +19,30 @@ html {
 
 body {
   width: 350px;
-  height: 300px;
+  height: 350px;
+  background-color: #171717;
+}
+
+input, select {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: #3b6fc3;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #7b9fd8;
+}
+
+button:active {
+  background-color: #2f538d;
 }
 
 .app {
@@ -25,68 +51,42 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
   padding: 20px;
+  color: white;
+  gap: 15px;
 }
 
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 280px;
 }
 
-.subtitle {
-  font-size: 12px;
+.input-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
-code {
-  font-size: 12px;
-  font-family: inherit;
-  background-color: rgba(254, 237, 185, 0.3);
-  padding: 2px 4px;
-  border-radius: 2px;
+.input-control label {
+  flex: 1 1 0;
 }
 
-.counter-label {
-  font-size: 12px;
-  margin-bottom: 5px;
+.input-control input,
+.input-control select {
+  flex: 2 1 0;
 }
 
-.counter {
-  font-size: 36px;
-  font-weight: 700;
+#form button {
+  width: 100%;
+  margin-top: 10px;
 }
 
-.button-container {
-  margin-top: 15px;
-}
-
-.button {
-  border: 0;
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 4px;
-  margin-left: 4px;
-  background-color: bisque;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  user-select: none;
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:hover {
-  transform: scale(1.1);
-}
-
-.divider {
-  margin: 30px auto 25px;
-  width: 50px;
-  border: 0.5px dashed #000;
-  opacity: 0.1;
+#form #start {
+  margin-right: 5px;
 }
