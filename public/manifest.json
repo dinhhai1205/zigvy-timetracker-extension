@@ -24,10 +24,10 @@
     "storage",
     "nativeMessaging"
   ],
-  "host_permissions": ["*://time-tracker.zigvy.com/*", "*://*.zigvy.com/*"],
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
-      "matches": ["*://time-tracker.zigvy.com/*", "*://*.zigvy.com/*"],
+      "matches": ["<all_urls>"],
       "run_at": "document_idle",
       "js": ["contentScript.js"]
     }

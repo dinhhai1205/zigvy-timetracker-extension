@@ -19,11 +19,12 @@ html {
 
 body {
   width: 350px;
-  height: 350px;
+  height: 510px;
   background-color: #171717;
 }
 
-input, select {
+input,
+select {
   padding: 5px;
   border-radius: 5px;
   border: none;
@@ -46,6 +47,7 @@ button:active {
 }
 
 .app {
+  position: relative;
   height: 100%;
   display: flex;
   align-items: center;
@@ -53,16 +55,53 @@ button:active {
   flex-direction: column;
   padding: 20px;
   color: white;
+  font-size: 10px;
   gap: 15px;
 }
 
-#form {
+#form,
+#form-auto {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
   width: 280px;
+}
+
+.group-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.group-button button {
+  flex: 1 1 0%;
+  width: 60px !important;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3b6fc3;
+  color: white;
+  font-size: 10px;
+  padding: 3px;
+  margin-top: 0px !important;
+}
+
+.group-button button:hover {
+  background-color: #163e7f;
+}
+
+.group-button button.active {
+  background-color: #be5d1c;
+}
+
+.action-button {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .input-control {
@@ -82,11 +121,96 @@ button:active {
   flex: 2 1 0;
 }
 
+#content {
+  overflow: scroll;
+}
+
 #form button {
   width: 100%;
   margin-top: 10px;
 }
 
-#form #start {
+#form #start,
+#form #start2,
+#form-auto #a-start,
+#form-auto #a-start2,
+#form-auto #a-from {
   margin-right: 5px;
+}
+
+#logout-button {
+  background-color: transparent;
+}
+
+#form #logtime {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+}
+
+#form #generate-description {
+  background-color: #6b8d53;
+}
+
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 220px;
+  margin-top: 10px;
+}
+
+#login-button {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 50px;
+}
+
+#login-error,
+#form-error,
+#form-auto-error {
+  color: #e95c5c;
+  font-size: 10px;
+}
+
+#logger {
+  width: 280px;
+  height: 100px;
+  border: 1px solid white;
+  border-radius: 20px;
+  font-size: 10px;
+  padding: 10px;
+  overflow: scroll;
+}
+
+#logger p.error {
+  color: #d16363;
+}
+
+#clear-log-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 10px;
+  float: right;
+  text-align: right;
+  width: 100%;
+}
+
+.divider {
+  border-bottom: 1px solid white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 1px;
+  width: 100%;
+}
+
+#stop {
+  width: 100%;
+  margin-top: 10px;
 }

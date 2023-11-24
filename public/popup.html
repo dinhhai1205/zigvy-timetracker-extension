@@ -9,38 +9,130 @@
     <div class="app">
       <img src="/icons/timetracker.svg" />
 
-      <form id="form">
+      <div id="login">
         <div class="input-control">
-          <label>Project</label>
-          <select id="projectId"></select>
+          <input id="email" placeholder="Email" />
         </div>
 
         <div class="input-control">
-          <label>Start</label>
-          <input type="time" id="start" />
-
-          <label>End</label>
-          <input type="time" id="end" />
+          <input type="password" id="password" placeholder="Password" />
         </div>
 
-        <div class="input-control">
-          <label>Date select</label>
-          <input type="date" id="dateSelected" />
+        <div id="login-error"></div>
+        <button id="login-button">Log In</button>
+      </div>
+
+      <div id="content">
+        <div class="group-button action-button">
+          <button id="auto-tool">Auto Tool</button>
+          <button id="logout-button">Log Out</button>
         </div>
 
-        <div class="input-control">
-          <label>Issue</label>
-          <input id="issue" placeholder="Issue" />
-        </div>
+        <form id="form">
+          <div id="logtime">
+            <div class="input-control">
+              <label>Project</label>
+              <select id="projectId"></select>
+            </div>
 
-        <div class="input-control">
-          <label>Description</label>
-          <input id="description" placeholder="Description" />
-        </div>
+            <div class="input-control">
+              <label>Date select</label>
+              <input type="date" id="dateSelected" />
+            </div>
 
-        <button id="generate-description">Generate Description</button>
-        <button id="submit" type="submit">Let's fucking go</button>
-      </form>
+            <div class="divider"></div>
+
+            <div class="input-control">
+              <label>Start</label>
+              <input type="time" id="start" />
+
+              <label>End</label>
+              <input type="time" id="end" />
+            </div>
+
+            <div class="input-control">
+              <label>Issue</label>
+              <input id="issue" placeholder="Issue" />
+            </div>
+
+            <div class="input-control">
+              <label>Description</label>
+              <input id="description" placeholder="Description" />
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="input-control">
+              <label>Start 2</label>
+              <input type="time" id="start2" />
+
+              <label>End 2</label>
+              <input type="time" id="end2" />
+            </div>
+
+            <div class="input-control">
+              <label>Issue 2</label>
+              <input id="issue2" placeholder="Issue" />
+            </div>
+
+            <div class="input-control">
+              <label>Description 2</label>
+              <input id="description2" placeholder="Description" />
+            </div>
+
+            <div id="form-error"></div>
+            <button id="submit" type="submit">BUMP</button>
+          </div>
+        </form>
+
+        <form id="form-auto">
+          <div class="input-control">
+            <label>Project</label>
+            <select id="a-projectId"></select>
+          </div>
+
+          <div class="input-control">
+            <label>From</label>
+            <input type="date" id="a-from" />
+
+            <label>To</label>
+            <input type="date" id="a-to" />
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="input-control">
+            <label>Start</label>
+            <input type="time" id="a-start" />
+
+            <label>End</label>
+            <input type="time" id="a-end" />
+          </div>
+
+          <div class="input-control">
+            <label>Start 2</label>
+            <input type="time" id="a-start2" />
+
+            <label>End 2</label>
+            <input type="time" id="a-end2" />
+          </div>
+
+          <div class="input-control">
+            <label>Issue</label>
+            <input id="a-issue" placeholder="Issue" />
+          </div>
+
+          <button id="clear-log-button">Clear</button>
+          <div id="logger"></div>
+          <div id="form-auto-error"></div>
+
+          <button id="stop">Stop</button>
+
+          <button style="width: 100%; margin-top: 5px" type="submit">
+            Auto Generate
+          </button>
+        </form>
+      </div>
     </div>
 
     <script src="popup.js"></script>
