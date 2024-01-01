@@ -16,6 +16,8 @@ const PROJECT_ID = {
   Chatchilla: 'DhZvmyRsBRgY3z6ew',
   Ticketmaster: 'mv8AK6RsZb6ioTE3z',
   SurveyMaster: 'SoA9iGMgEYqtTY29P',
+  WilliamBills: 'mHwHMpSbLMWkY8bEQ',
+  HRForte: 'GpEuPumiQTJ6xoftb'
 };
 
 const METEOR_USER = 'METEOR_USER';
